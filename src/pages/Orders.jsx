@@ -42,15 +42,14 @@ if(response.data.success){
 }
 }catch(error){
 console.log(error)
-toast.error(response.data.message)
+toast.error(error.message)
   }
 }
 
   useEffect(() => {
-    // console.log("Token:", token); // Check if token is defined
 
     fetchAllOrders();
-  }, [token]);
+  },);
   return (
     <div>
       <h3>Order Page</h3>
