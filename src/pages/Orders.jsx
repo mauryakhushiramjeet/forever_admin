@@ -24,6 +24,7 @@ const Orders = ({ token }) => {
       );
       // console.log(response.data)
       if (response.data.success) {
+        console.log(response.data)
         setOrders(response.data.orders.reverse());
       } else {
         toast.error(response.data.message);
@@ -81,7 +82,7 @@ toast.error(error.message)
                 })}
               </div>
               <p className="mt-3 mb-2 font-medium">
-                {orders.address.firstName + " " + orders.address.lastName}
+                {orders.address.firstName + " " + orders.address.lasttName}
               </p>
               <div>
                 <p>{orders.address.street + " , "}</p>
